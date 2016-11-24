@@ -70,12 +70,8 @@
 								taskOptions = extend({}, options.tasks[taskName], true); // copy, dont modify directly
 								taskOptions.src = taskFiles;
 
-//								grunt.verbose.writeln(new S(JSON.stringify(taskOptions, null, 2)).replaceAll('  ', '\t').toString());
-
 								grunt.verbose.ok("Setting config for task " + taskName + "...");
 								grunt.config.set(taskName + '.' + target, taskOptions);
-
-//								grunt.verbose.writeln(JSON.stringify(grunt.config.getRaw(), null, 2));
 
 								// queue to run
 								grunt.verbose.ok("Queueing task " + taskName + ":" + target + "...");

@@ -17,7 +17,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-if-contains');
 ```
 
-## The "buildnumber" task
+## The "grunt-if-contains" task
 
 ### Overview
 In your project's Gruntfile, add a section named `'grunt-if-contains'` to the data object passed into `grunt.initConfig()`. This example tests Javascript files in the project root, and if they contain 'use strict' it executes the JSLint Grunt task on them.
@@ -25,26 +25,27 @@ In your project's Gruntfile, add a section named `'grunt-if-contains'` to the da
 ```js
 grunt.initConfig({
 	'grunt-if-contains': {
-		src [
-			// files to check if the string exists in
-			'*.js'
-		],
+		my_task: { // call this whatever you want to identify your task
+			src [
+				// files to check if the string exists in
+				'*.js'
+			],
 
-		options: {
-			ifContains: "use strict",
-			regExp: false,
+			options: {
+				ifContains: "use strict",
 
-			// tasks to execute if the string is true in a file
-			tasks: {
-				'jslint': {
-					// options for grunt-jslint
-					directives: {
-						white: true
+				// tasks to execute if the string is true in a file
+				tasks: {
+					'jslint': {
+						// options for grunt-jslint
+						directives: {
+							white: true
+						}
 					}
 				}
 			}
-		},
-	},
+		}
+	}
 })
 ```
 
