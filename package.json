@@ -1,6 +1,6 @@
 {
 	"name": "grunt-if-contains",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"description": "Executes Grunt tasks when a file or multiple files contain a string/regular expression",
 	"homepage": "https://github.com/benjamingwynn/grunt-if-contains",
 	"repository": "https://github.com/benjamingwynn/grunt-if-contains",
